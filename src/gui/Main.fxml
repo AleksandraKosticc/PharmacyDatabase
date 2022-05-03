@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacydatabase.MainController">
+   <children>
+      <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1263.0">
+         <children>
+            <BorderPane prefHeight="694.0" prefWidth="1234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <VBox prefHeight="695.0" prefWidth="232.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnProizvodi" alignment="BASELINE_LEFT" onAction="#handleButtonAction" onMouseEntered="#mouse_ent_proizvodi" onMouseExited="#mouse_ext_proizvodi" prefHeight="80.0" prefWidth="237.0" text="Proizvodi" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" opacity="0.91" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/drug.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnKasa" alignment="BASELINE_LEFT" onAction="#handleButtonAction" onMouseEntered="#mouse_ent_kasa" onMouseExited="#mouse_ext_kasa" prefHeight="80.0" prefWidth="237.0" text="Kasa">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/euro.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnFakture" alignment="BASELINE_LEFT" onAction="#handleButtonAction" onMouseEntered="#mouse_ent_fakture" onMouseExited="#mouse_ext_fakture" prefHeight="80.0" prefWidth="237.0" text="Fakture">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/drugstore.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRecepti" alignment="BASELINE_LEFT" onAction="#handleButtonAction" onMouseEntered="#mouse_ent_izvjestaji" onMouseExited="#mouse_ext_izvjestaji" prefHeight="80.0" prefWidth="237.0" text="Recepti">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/medical-report.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSifarnici" onAction="#handleButtonAction" onMouseEntered="#mouse_ent_sifarnici" onMouseExited="#mouse_ext_sifarnici" prefHeight="88.0" prefWidth="237.0" text="Šifarnici">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/database.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="-10.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSkladiste" onAction="#handleButtonAction" onMouseEntered="#mouse_ent_skladiste" onMouseExited="#mouse_ext_skladiste" prefHeight="88.0" prefWidth="237.0" text="Skladište">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/stock.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="-10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="74.0" prefWidth="1225.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="1038.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/user.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="75.0" prefWidth="233.0" style="-fx-background-color: #061E5A;">
+                           <children>
+                              <ImageView fitHeight="47.0" fitWidth="37.0" layoutX="166.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="62.0" layoutY="24.0" text="APOTEKA" textFill="WHITE">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="1159.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1093.0" layoutY="28.0" onMouseClicked="#logout" prefHeight="22.0" prefWidth="93.0" text="Odjavi se">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane fx:id="pnSifarnici" prefHeight="695.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                           <children>
+                              <TabPane layoutY="1.0" prefHeight="694.0" prefWidth="1002.0" style="-fx-background-color: #ffffff;" stylesheets="@tabStyle.css" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Proizvođači">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f5f5f5;">
+                                             <children>
+                                                <TableView fx:id="tabelaProizvodjac" layoutX="58.0" layoutY="151.0" prefHeight="412.0" prefWidth="886.0" stylesheets="@style.css" />
+                                                <HBox layoutX="58.0" layoutY="52.0" prefHeight="32.0" prefWidth="886.0" style="-fx-background-color: #E6ECF1;">
+                                                   <children>
+                                                      <Label prefHeight="32.0" prefWidth="178.0" text="Naziv:">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="32.0" prefWidth="169.0" text="Adresa:">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="32.0" prefWidth="164.0" text="Mjesto:">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <Label prefHeight="32.0" prefWidth="139.0" text="Telefon:">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Pane layoutX="58.0" layoutY="84.0" prefHeight="67.0" prefWidth="886.0" style="-fx-background-color: #ffffff;">
+                                                   <children>
+                                                      <TextField fx:id="nazivProizvodjaca" layoutX="10.0" layoutY="11.0" />
+                                                      <TextField fx:id="adresaProizvodjaca" layoutX="188.0" layoutY="11.0">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </TextField>
+                                                      <JFXComboBox fx:id="mjestoProizvodjacaComboBox" layoutX="364.0" layoutY="8.0" prefHeight="17.0" prefWidth="139.0" />
+                                                      <TextField fx:id="telefonProizvodjaca" layoutX="530.0" layoutY="11.0" />
+                                                   </children>
+                                                </Pane>
+                                                <HBox layoutX="822.0" layoutY="88.0" prefHeight="34.0" prefWidth="136.0">
+                                                   <children>
+                                                      <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#dodajProizvodjacaAction" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/plus.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#izmijeniProizvodjacaAction" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/edit.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="8.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="32.0" fitWidth="37.0" onMouseClicked="#obrisiProizvodjacaAction" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/trash.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="8.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnRecepti" prefHeight="695.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                           <children>
+                              <ImageView fitHeight="660.0" fitWidth="1002.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/syringe-1884784_1920.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TableView fx:id="tabelaRecepti" layoutX="56.0" layoutY="59.0" prefHeight="524.0" prefWidth="857.0" stylesheets="@style.css" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnKasa" prefHeight="694.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                           <children>
+                              <GridPane layoutX="77.0" layoutY="5.0" prefHeight="333.0" prefWidth="834.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="490.0" minHeight="10.0" prefHeight="301.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="tabelaKasa" editable="true" prefHeight="301.0" prefWidth="880.0" GridPane.rowIndex="1" />
+                                    <Pane prefHeight="29.0" prefWidth="539.0" style="-fx-background-color: #8c8a8a;">
+                                       <children>
+                                          <Label layoutX="395.0" layoutY="8.0" prefHeight="21.0" prefWidth="45.0" text="KASA" textFill="#fcf7f7">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </GridPane>
+                              <Pane layoutX="26.0" layoutY="358.0" prefHeight="227.0" prefWidth="505.0">
+                                 <children>
+                                    <JFXButton layoutX="53.0" layoutY="182.0" onAction="#dodajStavkuAction" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #75B91F;" text="Dodaj" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/tick.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton layoutX="175.0" layoutY="182.0" onAction="#ukloniStavkuAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #F81900;" text="Ukloni" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <graphic>
+                                          <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/close-button.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <GridPane layoutX="52.0" prefHeight="150.0" prefWidth="297.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="127.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="146.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="66.0" text="Zaposleni:">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="24.0" prefWidth="61.0" text="Šifra:" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="25.0" prefWidth="68.0" text="Količina:" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="41.0" prefWidth="147.0" text="Tip artikla:" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="zaposleniComboBox" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" />
+                                          <ComboBox fx:id="sifraArtiklaComboBox" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="kolicinaArtikla" prefHeight="25.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <ComboBox fx:id="tipArtiklaComboBox" prefHeight="25.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                    <Button layoutX="363.0" layoutY="119.0" mnemonicParsing="false" onAction="#unesiRecept" prefHeight="22.0" prefWidth="28.0" text="+" />
+                                 </children>
+                              </Pane>
+                              <JFXButton layoutX="774.0" layoutY="363.0" onAction="#noviRacunAction" prefHeight="97.0" prefWidth="137.0" style="-fx-background-color: #75B91F;" text="Kreiraj račun" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></JFXButton>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnSkladiste" prefHeight="695.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                           <children>
+                              <ImageView fitHeight="695.0" fitWidth="1002.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/syringe-1884784_1920.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TableView fx:id="tabelaSkladiste" layoutX="66.0" layoutY="72.0" prefHeight="485.0" prefWidth="817.0" stylesheets="@style.css" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnFakture" prefHeight="695.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                           <children>
+                              <Pane layoutX="35.0" layoutY="-6.0" prefHeight="97.0" prefWidth="919.0">
+                                 <children>
+                                    <Pane layoutY="38.0" prefHeight="46.0" prefWidth="894.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <JFXComboBox fx:id="proizvodjacComboBoxFaktura" layoutX="4.0" layoutY="9.0" prefHeight="25.0" prefWidth="133.0" />
+                                          <TextField fx:id="brojFakture" layoutX="162.0" layoutY="9.0" prefHeight="25.0" prefWidth="133.0" />
+                                          <JFXComboBox fx:id="zaposleniComboBoxFaktura" layoutX="329.0" layoutY="9.0" prefHeight="25.0" prefWidth="117.0" />
+                                          <JFXComboBox fx:id="barkodStavkaFaktura" layoutX="482.0" layoutY="9.0" prefHeight="25.0" prefWidth="85.0" />
+                                          <TextField fx:id="kolicinaStavkaFaktura" layoutX="591.0" layoutY="9.0" prefHeight="25.0" prefWidth="65.0" />
+                                          <JFXButton layoutX="684.0" layoutY="6.0" onAction="#dodajStavkaFakturaAction" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #75B91F;" text="Dodaj" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/tick.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton layoutX="789.0" layoutY="6.0" onAction="#ukloniStavkaFakturaAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #F81900;" text="Ukloni" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/close-button.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <HBox layoutY="6.0" prefHeight="32.0" prefWidth="894.0" style="-fx-background-color: #E6ECF1;">
+                                       <children>
+                                          <Label prefHeight="24.0" prefWidth="154.0" text="Naziv proizvođača" textFill="#0d0b0b">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="24.0" prefWidth="161.0" text="Broj fakture" textFill="#0d0b0b">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="24.0" prefWidth="147.0" text="Zaposleni" textFill="#0d0b0b">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="24.0" prefWidth="103.0" text="Barkod" textFill="#0d0b0b">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="24.0" prefWidth="144.0" text="Količina" textFill="#0d0b0b">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </Pane>
+                              <JFXButton layoutX="835.0" layoutY="287.0" onAction="#kreirajFakturuAction" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #75B91F;" text="Sačuvaj" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/tick.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <TableView fx:id="tabelaStavkaFaktura" layoutX="35.0" layoutY="80.0" prefHeight="200.0" prefWidth="896.0" />
+                              <TableView fx:id="tabelaFakture" layoutX="35.0" layoutY="373.0" prefHeight="227.0" prefWidth="896.0" />
+                              <HBox layoutX="36.0" layoutY="342.0" prefHeight="32.0" prefWidth="896.0" style="-fx-background-color: #E6ECF1;">
+                                 <children>
+                                    <Label prefHeight="24.0" prefWidth="151.0" text="Fakture" textFill="#0d0b0b">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnProizvodi" prefHeight="695.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                           <children>
+                              <TabPane prefHeight="694.0" prefWidth="1002.0" style="-fx-background-color: #ffffff;" stylesheets="@tabStyle.css" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Lijekovi">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1002.0" style="-fx-background-color: #f5f5f5;">
+                                             <children>
+                                                <TableView fx:id="tabelaLijekovi" layoutX="27.0" layoutY="242.0" prefHeight="325.0" prefWidth="936.0" stylesheets="@style.css" />
+                                                <AnchorPane layoutX="203.0" layoutY="108.0" prefHeight="27.0" prefWidth="30.0" />
+                                                <VBox layoutX="27.0" layoutY="41.0" prefHeight="114.0" prefWidth="936.0">
+                                                   <children>
+                                                      <HBox prefHeight="32.0" prefWidth="936.0" style="-fx-background-color: #E6ECF1;">
+                                                         <children>
+                                                            <Label prefHeight="32.0" prefWidth="101.0" text="Barkod:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="171.0" text="Naziv:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="177.0" text="Generički naziv:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="53.0" prefWidth="126.0" text="Nabavna cijena:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="103.0" text="Prodajna cijena:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="167.0" text="Doza:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane prefHeight="67.0" prefWidth="936.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <TextField fx:id="sifraLijeka" layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" />
+                                                            <TextField fx:id="nazivLijeka" layoutX="111.0" layoutY="14.0" />
+                                                            <TextField fx:id="generickiNaziv" layoutX="284.0" layoutY="14.0" />
+                                                            <TextField fx:id="nabavnaCijenaLijeka" layoutX="460.0" layoutY="14.0" prefWidth="88.0" />
+                                                            <TextField fx:id="prodajnaCijenaLijeka" layoutX="585.0" layoutY="14.0" prefWidth="88.0" />
+                                                            <TextField fx:id="dozaLijeka" layoutX="694.0" layoutY="14.0" />
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="27.0" layoutY="141.0" prefHeight="114.0" prefWidth="936.0">
+                                                   <children>
+                                                      <HBox prefHeight="32.0" prefWidth="886.0" style="-fx-background-color: #E6ECF1;">
+                                                         <children>
+                                                            <Label prefHeight="32.0" prefWidth="178.0" text="Oblik:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label prefHeight="74.0" prefWidth="168.0" text="Proizvođač:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="36.0" prefWidth="112.0" text="Naziv liste:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="81.0" prefWidth="182.0" text="Režim izdavanja:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane prefHeight="67.0" prefWidth="886.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <TextField fx:id="oblikLijeka" layoutX="11.0" layoutY="18.0" />
+                                                            <JFXComboBox fx:id="proizvodjacComboBoxLijeka" layoutX="187.0" layoutY="13.0" prefHeight="25.0" prefWidth="138.0" />
+                                                            <JFXComboBox fx:id="nazivListeComboBox" layoutX="357.0" layoutY="13.0" prefHeight="25.0" prefWidth="90.0" />
+                                                            <JFXComboBox fx:id="rezimIzdavanjaComboBoxLijeka" layoutX="468.0" layoutY="13.0" prefHeight="25.0" prefWidth="171.0" />
+                                                            <HBox layoutX="766.0" layoutY="10.0" prefHeight="37.0" prefWidth="173.0">
+                                                               <children>
+                                                                  <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#dodajLijekAction" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../img/plus.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#izmjeniLijekAction" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../img/edit.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Medicinski aparati">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="665.0" prefWidth="1009.0" style="-fx-background-color: #f5f5f5;">
+                                             <children>
+                                                <TableView fx:id="tabelaMedicinskiAparati" layoutX="27.0" layoutY="155.0" prefHeight="419.0" prefWidth="936.0" stylesheets="@style.css" />
+                                                <VBox layoutX="27.0" layoutY="41.0" prefHeight="114.0" prefWidth="936.0">
+                                                   <children>
+                                                      <HBox prefHeight="32.0" prefWidth="902.0" style="-fx-background-color: #E6ECF1;">
+                                                         <children>
+                                                            <Label prefHeight="32.0" prefWidth="88.0" text="Barkod:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="169.0" text="Naziv:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="74.0" prefWidth="168.0" text="Proizvođač:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="125.0" text="Nabavna cijena:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="127.0" text="Prodajna cijena:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="105.0" text="Režim izdavanja:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane prefHeight="67.0" prefWidth="902.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <TextField fx:id="sifraAparata" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="67.0" />
+                                                            <TextField fx:id="nazivAparata" layoutX="97.0" layoutY="14.0" />
+                                                            <JFXComboBox fx:id="proizvodjacComboBoxAparata" layoutX="268.0" layoutY="12.0" prefHeight="25.0" prefWidth="140.0" />
+                                                            <TextField fx:id="nabavnaCijenaAparata" layoutX="435.0" layoutY="16.0" prefHeight="25.0" prefWidth="91.0" />
+                                                            <TextField fx:id="prodajnaCijenaAparata" layoutX="559.0" layoutY="16.0" prefWidth="91.0" />
+                                                            <JFXComboBox fx:id="rezimIzdavanjaComboBoxAparata" layoutX="687.0" layoutY="12.0" prefHeight="25.0" prefWidth="124.0" />
+                                                            <HBox layoutX="848.0" layoutY="4.0" prefHeight="37.0" prefWidth="87.0">
+                                                               <children>
+                                                                  <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#dodajMedicinskiAparatiAction" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../img/plus.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#izmijeniMedicinskiAparatAction" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../img/edit.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="Kozmetika">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f5f5f5;">
+                                             <children>
+                                                <TableView fx:id="tabelaKozmetika" layoutX="27.0" layoutY="155.0" prefHeight="419.0" prefWidth="936.0" stylesheets="@style.css" />
+                                                <VBox layoutX="27.0" layoutY="41.0" prefHeight="114.0" prefWidth="936.0">
+                                                   <children>
+                                                      <HBox prefHeight="32.0" prefWidth="886.0" style="-fx-background-color: #E6ECF1;">
+                                                         <children>
+                                                            <Label prefHeight="32.0" prefWidth="89.0" text="Barkod:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="164.0" text="Naziv:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="145.0" text="Proizvođač:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="30.0" prefWidth="100.0" text="Jedinica mjere:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="39.0" prefWidth="106.0" text="Nabavna cijena:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="39.0" prefWidth="102.0" text="Prodajna cijena:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label prefHeight="32.0" prefWidth="111.0" text="Režim izdavanja:">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane prefHeight="67.0" prefWidth="886.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <TextField fx:id="sifraKozmetike" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="68.0" />
+                                                            <TextField fx:id="nazivKozmetike" layoutX="97.0" layoutY="14.0" />
+                                                            <JFXComboBox fx:id="proizvodjacComboBoxKozmetike" layoutX="262.0" layoutY="12.0" prefHeight="25.0" prefWidth="132.0" />
+                                                            <TextField fx:id="jedinicuMjere" layoutX="409.0" layoutY="14.0" prefHeight="25.0" prefWidth="88.0" />
+                                                            <TextField fx:id="nabavnaCijenaKozmetike" layoutX="509.0" layoutY="14.0" prefWidth="88.0" />
+                                                            <TextField fx:id="prodajnaCijenaKozmetike" layoutX="615.0" layoutY="14.0" prefWidth="88.0" />
+                                                            <JFXComboBox fx:id="rezimIzdavanjaComboBoxKozmetike" layoutX="716.0" layoutY="12.0" prefHeight="25.0" prefWidth="120.0" />
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </VBox>
+                                                <HBox layoutX="875.0" layoutY="80.0" prefHeight="37.0" prefWidth="88.0">
+                                                   <children>
+                                                      <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#dodajKozmetikaAction" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/plus.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="33.0" fitWidth="47.0" onMouseClicked="#izmijeniKozmetikaAction" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/edit.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
