@@ -1,5 +1,6 @@
 # PharmacyDatabase
  
+Student project from the database course. It is an information system for the pharmacy business. 
 ![ezgif-3-31474b526e](https://user-images.githubusercontent.com/16460530/166584778-8b71c69e-772c-466b-ab91-4290945ff5c8.gif)
 
 
